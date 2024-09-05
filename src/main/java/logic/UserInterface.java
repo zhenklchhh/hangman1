@@ -154,4 +154,24 @@ public class UserInterface {
     public char getLetterFromUser(){
         return Character.toLowerCase(sc.next().charAt(0));
     }
+    public void printHint(Word word){
+        System.out.println("!!!!!!!--" + word.hint + "--!!!!!!!");
+    }
+    public void printWinMessage(Word word){
+        System.out.println("Ты выйграл! :)");
+        System.out.println("Загаданное слово: " + word.value);
+    }
+    public void printLoseMessage(Word word){
+        System.out.println("Тебя повесили :(");
+        System.out.println("Загаданное слово: " + word.value);
+    }
+    public void printInvalidInputMessage(){
+        System.out.println("Неправильный ввод. Вводите только буквы русского алфавита");
+    }
+    public void printUsedLetterMessage(){
+        System.out.println("Эта буква уже была использована");
+    }
+    public void printMaxMistakesMessage(){
+        System.out.println("(Максимальное количество ошибок, которые можно совершить - 6)");
+    }
 }
